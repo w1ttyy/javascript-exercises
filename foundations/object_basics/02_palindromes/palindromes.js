@@ -1,6 +1,8 @@
-const palindromes = function (arr) {
-  console.log(arr);
-  const reversed = arr.reverse();
+const palindromes = function (arr) {  
+  arr = arr.toLowerCase().replace(/[./,\/#!$%\^&\*;:{}=\-_\s`~()]/g,"").trim();
+    console.log(arr);
+
+  const reversed = arr.split('').reverse().join('');
   console.log(reversed);
 
   if (arr == reversed) {
@@ -10,7 +12,7 @@ const palindromes = function (arr) {
   }
 };
 
-palindromes('racecar');
+palindromes('A car, a man, a maraca.');
 
 // Do not edit below this line
 module.exports = palindromes;
